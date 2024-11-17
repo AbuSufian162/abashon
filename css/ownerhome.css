@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+
+/*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="text"] {
+  font: 1.25rem sans-serif;
+  display: block;
+  /* box-sizing: border-box; */
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: transparent;
+  border: 0px solid;
+  border-bottom: 3px solid gray;
+  font-family: "Montserrat";
+}
+
+/*---------------------------------------
+     NAV              
+  -----------------------------------------*/
+
+.nav {
+  min-width: 100vw;
+  height: 15vh;
+  padding: 12px 4%;
+  color: rgba(0, 0, 0, 0.575);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 0.5s;
+  background-color: rgba(0, 0, 0, 0.596);
+}
+.nav-right {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-logo {
+  height: 130px;
+  position: relative;
+  z-index: 5;
+}
+.loginbutton {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Raleway";
+  z-index: 5;
+  font-size: 1.15em;
+  font-weight: 600;
+  color: black;
+  box-shadow: 0%;
+  border-color: transparent;
+}
+.loginbutton:hover {
+  cursor: pointer;
+  background-color: #f3115b;
+  color: white;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all ease-in-out 0.7s;
+}
+
+.line1.morph {
+  transform: rotate(45deg) translate(0, 10px);
+  background-color: white;
+}
+
+.line2.morph {
+  opacity: 0;
+}
+
+.line3.morph {
+  transform: rotate(-45deg) translate(0, -10px);
+  background-color: white;
+}
+
+.menu-overlay {
+  height: 100vh;
+  min-height: 500px;
+  width: 100vw;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.95);
+  transition: all ease-in-out 0.4s;
+}
+
+.menu-overlay.open {
+  visibility: visible;
+  transform: translateX(-100%);
+}
+
+.menu-overlay a:hover {
+  color: #f3115b;
+}
+
+.nav-links {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  width: 50vw;
+  transform: translate(-95%, -50%);
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  /* width: fit-content; */
+}
+
+.nav-links a {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 45px;
+}
+
+/*---------------------------------------
+     Main              
+  -----------------------------------------*/
+.maindiv {
+}
+.topdiv{
+  height: 100vh;
+  width: 100vw;
+  /* position: ; */
+  /* margin-bottom: 15vh; */
+}
+
+.upperdiv {
+  background-image: url("../images/house2.jpg");
+  height: 80vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.round1 {
+  background-image: url("../images/Ellipse1.png");
+  height: 80vh;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintext {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 300;
+  font-size: 3rem;
+}
+.round2 {
+  background-image: url("../images/ellipse2.png");
+  height: 80vh;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: 60vh;
+  display: flex;
+  align-items: center;
+  right: 0%;
+  background-position: 100% center;
+}
+
+.searchbox {
+  position: absolute;
+  display: flex;
+  bottom: 10vh;
+  right: 30vw;
+  z-index: 2;
+  height: 20vh;
+  width: 40vw;
+  background-color: #ffbf5f;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#ownerbox{
+  /* right: 0px; */
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.textsearchbox {
+  width: 22%;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.inputsearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+}
+
+.searchbutton {
+  height: 100%;
+  border: 1px #cc2828 solid;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 18%;
+  justify-content: center;
+}
+
+.searchbutton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.addfilter{
+  height: 100vh;
+  position:fixed;
+  width: 100vw;
+  /* opacity:0; */
+  /* top: 30vh; */
+  background-color: rgba(0, 0, 0, 0.596);
+  z-index: 6;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.addfunc{
+  height: 60vh;
+  width: 30vw;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.addfunctop{
+  top: 0;
+  /* padding: 2px 5px; */
+  height: 15%;
+  width: 100%;
+  /* background-color: #cc2828; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#closebutn{
+  width: 5%;
+  height: 50%;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.yourhomes{
+  height: 100vh;
+  width: 100vw;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space; */
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 15vh;
+}
+.homestitle{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  /* background-image: url("https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_q=highq&im_w=720"); */
+  background-color: #f3115b;
+  width: 45%;
+  height: 85vh;
+  border-radius: 20px;
+  /* margin-left: 100px; */
+}
+.homestitletop{
+  border-radius: inherit;
+  height: 80%;
+  width: 100%;
+  /* background-image: url('https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_q=highq&im_w=720'); */
+  /* background: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.homestitlebottom{
+margin-left: 30px;
+margin-top: 30px;
+/* gap: 10px; */
+font-size: 1.2rem;
+font-family: 'Montserrat';
+color: white;
+height: 20%;
+}
+.homesdes{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+table{
+  font-family: "Montserrat";
+  width: 90%;
+  height: 85%;
+  text-align: center;
+  border-left: 2px #f3115b solid;
+  border-bottom: 2px #f3115b solid;
+  border-right: 2px #f3115b solid;
+  
+}
+td{
+  color: black;
+  border-top: 2px #f3115b solid;
+  border-right: 0px;
+  cursor: pointer;
+  /* display: flex; */
+  /* flex-direction: row; */
+  
+}
+
+tr:hover{
+  background-color: aliceblue;
+}

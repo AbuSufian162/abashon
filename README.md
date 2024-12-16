@@ -1,0 +1,1 @@
+Abashon is a house rental system specifically designed for the Bashundhara Residential Area, aimed at simplifying the apartment renting process for both tenants and landlords. By providing a seamless, transparent, and efficient platform, Abashon eliminates common challenges in the traditional apartment rental process.
